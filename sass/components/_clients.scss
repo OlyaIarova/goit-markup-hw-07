@@ -1,0 +1,41 @@
+.clients__title {
+  @include font( null, 14, 14, null);
+}
+
+.clients__list {
+  display: flex;
+  margin: 0;
+}
+
+.clients__item {
+  width: 170px;
+  height: 92px;
+  padding: auto;
+  margin-right: $marginPrimary;
+
+  &:nth-child(6) {
+    margin-right: 0px;
+  }
+}
+
+.clients__link {
+  width: 100%;
+  height: 100%;
+  @extend %flex-align;
+  justify-content: center;
+  border: 1px solid $colorIcon;
+  border-radius: 4px;
+  transition: border $duration $timingFunction,
+    fill $duration $timingFunction;
+
+  &:hover,
+  &:focus {
+    fill: $colorAccent;
+    border-color: $colorAccent;
+  }
+
+  & {
+    fill: currentColor;
+    fill: $colorIcon;
+  }
+}

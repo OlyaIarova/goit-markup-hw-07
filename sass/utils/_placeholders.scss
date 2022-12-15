@@ -1,0 +1,10 @@
+%flex-align {
+  display: flex;
+  align-items: center;
+}
+@mixin font($fw, $fs, $ln, $ls) {
+  font-weight: $fw + px;
+  font-size: $fs;
+  line-height: $ln/$fs;
+  letter-spacing: $ls + em;
+}

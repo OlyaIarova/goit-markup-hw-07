@@ -1,0 +1,65 @@
+.hero__button {
+  width: 216px;
+  height: 50px;
+  margin: 0;
+}
+
+.portfolio__button-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-secondary__button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  color: $colorPrimary-text;
+  background: $colorPrimary-bg-white;
+  font-family: Roboto, sans-serif;
+  @include font(500, 16px, 16, null);
+  transition: color $duration $timingFunction,
+    background-color $duration $timingFunction,
+    box-shadow $duration $timingFunction;
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary-white-btn;
+    background: $colorAccent;
+  }
+}
+
+.button-secondary__list {
+  margin-right: 8px;
+  &:nth-child(5n) {
+    margin-right: 0px;
+  }
+}
+
+.button.primary {
+  color: $colorPrimary-white-btn;
+  background: $colorAccent;
+  border-radius: 4px;
+  box-shadow: $shadowButtonSet;
+
+  &:hover,
+  &:focus {
+    color: $colorPrimary-text;
+    background: $colorTitle-bg;
+    box-shadow: none;
+  }
+}
+
+.button .secondary {
+  background: $colorPrimary-bg-white;
+  border-radius: 4px;
+}
+
+.button-secondary__list:hover,
+.button-secondary__list:focus {
+  border-radius: 4px;
+  box-shadow: $colorFooter-input;
+  border-radius: 4px;
+  transition: color $duration $timingFunction,
+    background-color $duration $timingFunction;
+}

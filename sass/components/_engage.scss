@@ -1,0 +1,36 @@
+.engage__list {
+  display: flex;
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+
+.engage__item {
+  margin-right: $marginPrimary;
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+
+.engage__title {
+  @extend %title;
+}
+
+.engage__box {
+  position: relative;
+}
+
+.engage__text {
+  position: absolute;
+  height: 70px;
+  width: 370px;
+  bottom: 0;
+
+  padding-top: 27px;
+   @include font(14, null, 16, null);
+  text-align: center;
+  background: $colorAbout-box;
+  color: $colorPrimary-white;
+}

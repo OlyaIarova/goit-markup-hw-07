@@ -1,0 +1,148 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-content: normal;
+  padding-left: 215px;
+
+  max-width: 1600px;
+  margin: 0px auto;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: $colorBackground-footer;
+}
+
+.footer__container {
+  padding-top: 50px;
+
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 284px;
+  margin: 0px;
+}
+
+.footer__address {
+  display: flex;
+  flex-direction: column;
+  color: $colorPrimary-white;
+  font-style: normal;
+  margin-top: 20px;
+   @include font(14, null, 24, null);
+  transition: color $duration $timingFunction;;
+
+  &:hover,
+  &:focus {
+    color: $colorAccent;
+  }
+}
+
+.footer__text {
+  margin-bottom: 12px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contact {
+  color: $colorPrimary-footer;
+  @include font(14, null, 24, null);
+
+  &:hover,
+  &:focus {
+    color: $colorAccent;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  width: 206px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px 93px 0px 0px;
+}
+
+.footer__title {
+  margin: 0px 0px 20px;
+  font-weight: 700;
+  color: $colorPrimary-white;
+ @include font(14, null, 16, null);
+}
+
+.footer__subtitle{
+  @extend %flex-align;
+  justify-content: flex-start;
+  
+}
+
+.footer__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+ }
+
+.footer__link{
+  width: 100%;
+  height: 100%;
+ @extend %flex-align;
+ justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  fill: $colorPrimary-white;
+  background: $colorBackground-icon;
+  transition: color $duration $timingFunction,
+    background-color $duration $timingFunction;
+
+  &:nth-child(4) {
+    margin-right: 0px;
+  }
+  &:hover, &:focus{
+     background-color: $colorAccent;
+  }
+}
+
+.footer__form {
+  min-width: 570px;
+  padding-top: 72px;
+  padding-bottom: 94px;
+  padding-left: 0px;
+  margin: 0px auto 0px 0px;
+}
+.submit-form {
+  display: flex;
+}
+
+.submit-form__field {
+  width: 358px;
+  padding: 15px 16px;
+  background-color: $colorBackground-footer;
+  border: 1px solid $colorFooter-input;
+  filter: drop-shadow$shadowButton-submit;
+  border-radius: 4px;
+  @include font(16, null, 20, null);
+ @extend %flex-align;
+
+  color: $colorPrimary-footer;
+
+}
+
+.submit-form__button {
+  @extend %flex-align;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 28px;
+@include font(16, 700, 30, 0.06);
+  color: $colorPrimary-white-btn;
+  background-color: $colorAccent;
+  box-shadow: $shadowButton-submit;
+  border-radius: 4px;
+  
+}
+
+.submit-form__icon {
+  margin-left: 10px;
+  fill: currentColor;
+  fill: $colorLogo-white;
+}

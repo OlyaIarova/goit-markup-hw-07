@@ -1,0 +1,36 @@
+.features__box {
+   @extend %flex-align;
+  justify-content: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  background: $colorTitle-bg;
+  border-radius: 4px;
+  margin-bottom: $marginPrimary;
+}
+
+.features__list{
+  display: flex;
+  margin-top: 0px;
+  align-items: flex-start;
+}
+
+.features__item{
+  margin-top: 0px;
+  width: 270px;
+  margin-right: $marginPrimary;
+  &:nth-child(4n) {
+  margin-right: 0px;
+}
+
+}
+
+.features__list .features__subtitle {
+  margin-bottom: 10px;
+  color: $colorPrimary-text;
+   @include font(14, null, 16, null);
+}
+
+.features__list .features__text {
+    @include font(14, null, 24, null);
+}
+
