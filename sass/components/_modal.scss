@@ -9,18 +9,16 @@
     opacity: 1;
     transition: opacity $duration $timingFunction, visibility $duration $timingFunction;
 }
-
-.backdrop .is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     overflow: visible;
+  }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+  border-radius: 15%;
 }
-
-// .backdrop .is-hidden .modal {
-//     transform: translate(-50%, -50%) scale(1.1);
-//     border-radius: 15%;
-// }
 
 .modal {
     position: absolute;
@@ -34,11 +32,9 @@
     box-shadow: $shadowBox-modal;
     border-radius: 4px;
     transition: transform $duration $timingFunction, border-radius $duration $timingFunction;
-    transform: translate(-50%, -50%) scale(1.1);
-    border-radius: 15%;
 }
 
-.modal-close{
+.button-close{
     position: absolute;
     width: 30px;
     height: 30px;
@@ -68,12 +64,15 @@
 .modal-title {
     margin-top: 40px;
     margin-bottom: 12px;
-     @include font(20, 700, 23, 0.03);
+    font-size: 20px;
+    line-height: calc(23 / 20);
     text-align: center;
+    letter-spacing: 0.03em;
+    font-weight: 700;
     color: $colorPrimary-text;
 }
 
-.modal-form__field {
+.modal-form__field { 
     display: inline-block;
     position: relative;
     margin-bottom: 10px;
@@ -83,8 +82,11 @@
 .modal-form__label {
     font-family: 'Roboto';
     font-style: normal;
-    @include font(12, 400, 14, 0.01);
+    font-weight: 400;
     height: 18px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
     color: $colorTitle-text;
 }
 
@@ -107,7 +109,8 @@
     position: absolute;
     top: 50%;
     left: 12px;
-    transform: translateY(-50%);
+    
+    transform: translateY(15%);
 }
 
 .modal-form__text:focus~.modal-form__icon {
@@ -131,11 +134,12 @@
     border-radius: 4px;
     cursor: pointer;
     transition: border $duration $timingFunction;
-}
-
-.modal-form__label--comment::placeholder {
-    @include font(12, null, 14, 0.01);
-    color: $colorBorder-placeholder;
+    &::placeholder {
+        font-size: 12px;
+        line-height: calc(14/12);
+        letter-spacing: 0.01em;
+        color: $colorBorder-placeholder;
+    }  
 }
 
 .modal-checkbox {
@@ -144,12 +148,14 @@
     height: 24px;
     margin: 30px 54px 20px 51px;
     font-weight: 400;
-    @include font(14, null, 24, null);
+    font-size: 14px;
+    line-height: calc(24 / 14);
     color: $colorTitle-text;
 }
 
-.modal-icon-checkbox {
-     @extend %flex-align;
+.modal-checkbox__icon {
+    display: inline-flex;
+    align-items: center;
     width: 16px;
     height: 15px;
     border-radius: 4px;
@@ -158,7 +164,7 @@
         fill $duration $timingFunction;
 }
 
-.checkbox:checked+.modal-icon-checkbox {
+.modal-checkbox__text:checked+.modal-checkbox__icon {
     fill: transparent;
     border-color: transparent;
     background-color: $colorAccent;
@@ -168,20 +174,23 @@
 
 }
 
-.a-checkbox {
+.modal-checkbox__link {
     cursor: pointer;
     text-decoration: underline;
     color: $colorAccent;
 }
 
-.modal-button {
+.modal-submit {
     display: block;
     width: 200px;
     height: 50px;
     border: none;
     padding: 10px 52px;
     margin: 0px auto;
-    @include font(16, 700, 30, 0.06);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
     color: $colorPrimary-white-btn;
     background-color: $colorAccent;
     box-shadow: $shadowButton-submit;
@@ -190,10 +199,10 @@
     transition: color $duration $timingFunction,
         background-color $duration $timingFunction,
         box-shadow $duration $timingFunction;
+        &:hover,
+        &:focus {
+            color: $colorTitle-text;
+            background: $colorTitle-bg;
+        }
 }
 
-.modal-button:hover,
-.modal-button:focus {
-    color: $colorTitle-text;
-    background: $colorTitle-bg;
-}

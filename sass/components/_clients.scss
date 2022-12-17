@@ -1,5 +1,11 @@
 .clients__title {
-  @include font( null, 14, 14, null);
+  margin-bottom: 50px;
+  color: $colorPrimary-text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .clients__list {

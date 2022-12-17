@@ -22,34 +22,27 @@
 
   <body>
     <!--шапка-->
-    <header class="page-header">
-      <div class="container header-nav">
-        <nav class="header-nav">
-          <a href="./index.html" class="logo-label">Web<span class="logo-label--black">Studio</span></a>
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="list after">Студія</a>
-            </li>
-            <li class="item">
-              <a href="" class="list primary current">Портфоліо</a>
-            </li>
-            <li class="item"><a href="" class="list after">Контакти</a></li>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header-nav"><a href="./index.html" class="logo-label">Web<span class="logo-label--black">Studio</span></a>
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a href="./index.html" class="header-nav__menu header-nav__menu--after" ">Студія</a></li>
+            <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__menu header-nav__menu--current">Портфоліо</a></li>
+            <li class="header-nav__item"><a href="./index.html" class="header-nav__menu header-nav__menu--after">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="auth-nav list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="list auth-icon">
-              <svg class="envelope primary" width="16" height="12">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="mailto:info@devstudio.com" class="header__contact">
+              <svg class="header__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a>
+              </svg>info@devstudio.com</a>
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="list auth-icon">
-              <svg class="smartphone" width="10" height="16">
+          <li class="header__item">
+            <a href="tel:+380961111111" class="header__contact">
+              <svg class="header__icon header__icon--envelope" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a>
+              </svg>+38 096 111 11 11</a>
           </li>
         </ul>
       </div>
@@ -60,35 +53,14 @@
         <div class="container">
           <h1 class="visually-hidden portfolio-title">портфоліо</h1>
           <div class="button-portfolio">
-            <ul class="button-portfolio__secondary">
-              <li class="button-secondary__list">
-                <button type="button" class="button-secondary__button">
-                  Усі
-                </button>
-              </li>
-              <li class="button-secondary__list">
-                <button type="button" class="button-secondary__button">
-                  Веб-сайти
-                </button>
-              </li>
-              <li class="button-secondary__list">
-                <button type="button" class="button-secondary__button">
-                  Додатки
-                </button>
-              </li>
-              <li class="button-secondary__list">
-                <button type="button" class="button-secondary__button">
-                  Дизайн
-                </button>
-              </li>
-              <li class="button-secondary__list">
-                <button type="button" class="button-secondary__button">
-                  Маркетинг
-                </button>
-              </li>
-            </ul>
+            <ul class="button-set portfolio__button-set">
+              <li class="button-set__item"><button class="button-set__button button-set__button--prim" type="button">Усі</button></li>
+              <li class="button-set__item"><button class="button-set__button" type="button">Веб-сайти</button></li>
+              <li class="button-set__item"><button class="button-set__button" type="button">Додатки</button></li>
+              <li class="button-set__item"><button class="button-set__button" type="button">Дизайн</button></li>
+              <li class="button-set__item"><button class="button-set__button" type="button">Маркетинг</button></li>
+          </ul>
           </div>
-
           <ul class="portfolio__list">
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
@@ -134,7 +106,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.3.jpg"
                     alt="Seafood"
                     width="370" />
@@ -154,7 +125,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.4.jpg"
                     alt="Prime"
                     width="370" />
@@ -174,7 +144,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.5.jpg"
                     alt="Boxes"
                     width="370" />
@@ -194,7 +163,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.6.jpg"
                     alt="Borders"
                     width="370" />
@@ -214,7 +182,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.7.jpg"
                     alt="Limited-Edition"
                     width="370" />
@@ -234,11 +201,10 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.8.jpg"
                     alt="LAB"
                     width="370" />
-                  <p class="text-overlay">
+                  <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
@@ -254,7 +220,6 @@
               <a href="" class="portfolio__link">
                 <div class="portfolio__box">
                   <img
-                    class="item"
                     src="./images/img2.9.jpg"
                     alt="Business"
                     width="370" />

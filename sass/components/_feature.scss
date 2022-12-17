@@ -27,10 +27,12 @@
 .features__list .features__subtitle {
   margin-bottom: 10px;
   color: $colorPrimary-text;
-   @include font(14, null, 16, null);
+  font-size: 14px;
+  line-height: calc(16 / 14);
 }
 
 .features__list .features__text {
-    @include font(14, null, 24, null);
+  font-size: 14px;
+  line-height: calc(24 / 14);
 }
 

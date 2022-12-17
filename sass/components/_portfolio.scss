@@ -25,11 +25,13 @@
 .portfolio__name {
   margin-bottom: 4px;
   color: var(--primary-text-color);
-  @include font(18, null, 36, 0.06);
+  @include font(18, null, 0.06);
+  line-height: calc(36 / 18);
 }
 
 .portfolio__text {
-  @include font(16, null, 30, null);
+  @include font(16, null, null);
+  line-height: calc(30/ 16);
 }
 
 .portfolio__content {
@@ -67,7 +69,8 @@
   left: 0;
   top: 0;
   padding: 63px 24px;
-  @include font(18, null, 28, null);
+  @include font(18, null, null);
+  line-height: calc(28 / 18);
   color: $colorPrimary-white;
   background: $colorAccentOpacity;
 

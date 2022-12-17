@@ -2,64 +2,67 @@
   width: 216px;
   height: 50px;
   margin: 0;
+  color: $colorPrimary-white-btn;
+  background-color: $colorAccent;
+  border: 1px solid transparent;
+font-weight: 700;
+font-size: 16px;
+line-height: calc(16/30);
+letter-spacing: 0.06em;
+&:hover,
+&:focus {
+  color: $colorPrimary-text; 
+  background-color: $colorPrimary-white-btn;}
 }
 
-.portfolio__button-secondary {
+
+.button-set {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 
-.button-secondary__button {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 6px 22px;
-  color: $colorPrimary-text;
-  background: $colorPrimary-bg-white;
-  font-family: Roboto, sans-serif;
-  @include font(500, 16px, 16, null);
-  transition: color $duration $timingFunction,
-    background-color $duration $timingFunction,
-    box-shadow $duration $timingFunction;
-
-  &:hover,
-  &:focus {
-    color: $colorPrimary-white-btn;
-    background: $colorAccent;
-  }
-}
-
-.button-secondary__list {
+.button-set__item {
   margin-right: 8px;
-  &:nth-child(5n) {
-    margin-right: 0px;
-  }
+   &:last-child {
+      margin-right: 0;
+      }
 }
 
-.button.primary {
-  color: $colorPrimary-white-btn;
-  background: $colorAccent;
+.button-set__button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-width: 0;
+  font-family: Roboto, sans-serif;
+  @include font(500, 16, null);
+  line-height: calc(26 / 16);
+  color: $colorPrimary-text;
+  background-color: $colorTitle-bg;
   border-radius: 4px;
-  box-shadow: $shadowButtonSet;
+  cursor: pointer;
+  transition: background-color $duration $timingFunction, color $duration $timingFunction, box-shadow $duration $timingFunction;
 
-  &:hover,
-  &:focus {
-    color: $colorPrimary-text;
-    background: $colorTitle-bg;
-    box-shadow: none;
-  }
+      &:hover,
+      &:focus {
+          color:  $colorPrimary-white-btn;
+          background-color: $colorAccent;
+          box-shadow: $shadowButtonSet;
+      }
 }
-
-.button .secondary {
-  background: $colorPrimary-bg-white;
-  border-radius: 4px;
+.button-set__button--prim{
+  color:  $colorPrimary-white-btn;
+  background-color: $colorAccent;
+   box-shadow: $shadowButtonSet;
+&:hover,
+&:focus{
+  color: $colorPrimary-text;
+  background-color: $colorTitle-bg; 
+  box-shadow: none;
 }
-
-.button-secondary__list:hover,
-.button-secondary__list:focus {
-  border-radius: 4px;
-  box-shadow: $colorFooter-input;
-  border-radius: 4px;
-  transition: color $duration $timingFunction,
-    background-color $duration $timingFunction;
 }

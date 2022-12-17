@@ -6,7 +6,6 @@
 
   max-width: 1600px;
   margin: 0px auto;
-
   padding-top: 60px;
   padding-bottom: 60px;
   background: $colorBackground-footer;
@@ -27,7 +26,8 @@
   color: $colorPrimary-white;
   font-style: normal;
   margin-top: 20px;
-   @include font(14, null, 24, null);
+  font-size: 14px;
+  line-height: calc(24 / 14);
   transition: color $duration $timingFunction;;
 
   &:hover,
@@ -45,7 +45,8 @@
 
 .footer__contact {
   color: $colorPrimary-footer;
-  @include font(14, null, 24, null);
+  font-size: 14px;
+  line-height: calc(24 / 14);
 
   &:hover,
   &:focus {
@@ -65,9 +66,9 @@
 
 .footer__title {
   margin: 0px 0px 20px;
-  font-weight: 700;
   color: $colorPrimary-white;
- @include font(14, null, 16, null);
+  font-size: 14px;
+  line-height: calc(16/14);
 }
 
 .footer__subtitle{
@@ -120,7 +121,8 @@
   border: 1px solid $colorFooter-input;
   filter: drop-shadow$shadowButton-submit;
   border-radius: 4px;
-  @include font(16, null, 20, null);
+  font-size: 16px;
+  line-height: calc(20/16);
  @extend %flex-align;
 
   color: $colorPrimary-footer;
@@ -133,7 +135,8 @@
   height: 50px;
   margin-left: 12px;
   padding: 10px 28px;
-@include font(16, 700, 30, 0.06);
+@include font(16, 700, 0.06);
+line-height: calc(30/16);
   color: $colorPrimary-white-btn;
   background-color: $colorAccent;
   box-shadow: $shadowButton-submit;

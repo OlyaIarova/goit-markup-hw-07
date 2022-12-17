@@ -1,9 +1,5 @@
 .engage__list {
   display: flex;
-
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
 }
 
 .engage__item {
@@ -15,7 +11,11 @@
 }
 
 .engage__title {
-  @extend %title;
+  margin-bottom: 50px;
+  color: $colorPrimary-text;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
 }
 
 .engage__box {
@@ -29,7 +29,8 @@
   bottom: 0;
 
   padding-top: 27px;
-   @include font(14, null, 16, null);
+  font-size: 14px;
+  line-height: calc(16/14);
   text-align: center;
   background: $colorAbout-box;
   color: $colorPrimary-white;

@@ -2,9 +2,16 @@
   display: flex;
   align-items: center;
 }
-@mixin font($fw, $fs, $ln, $ls) {
+@mixin font($fw, $fs, $ls) {
   font-weight: $fw + px;
   font-size: $fs;
-  line-height: $ln/$fs;
   letter-spacing: $ls + em;
+}
+%title{
+  color: $colorPrimary-text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }

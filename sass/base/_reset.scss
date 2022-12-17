@@ -13,7 +13,6 @@ ul {
   margin: 0px;
   list-style: none;
 }
-
 input,
 button,
 textarea {
@@ -26,7 +25,7 @@ a {
 }
 
 .visually-hidden,
-.checkbox {
+.modal-checkbox__text {
   position: absolute;
   width: 1px;
   height: 1px;
